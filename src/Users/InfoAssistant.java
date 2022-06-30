@@ -6,8 +6,9 @@ public class InfoAssistant extends InfoMaster {
 
     @Override
     public void typeInfo() {
+
         System.out.print("Введите имя пользователя - ");
-        userName = super.scanner.nextLine();
+        this.userName = super.scanner.nextLine();
     }
 
     @Override

@@ -4,9 +4,8 @@ public class Main {
     public static void main(String[] args) {
 
         Customer customer = new Customer("Вася", "Петров", "СПбБанк");
+        Employee employee = new Employee("Дмитрий", "Яшин", "НефтьБанк");
         customer.showInfo();
-
-        Employee employee = new Employee("Дмитрий", "Ерохов", "НефтьБанк");
         employee.showInfo();
 
         customer.accountProcess();
@@ -14,6 +13,17 @@ public class Main {
 
         customer.work();
         employee.work();
+
+        customer.tellWeather();
+
+        System.out.println("");
+        Dog dog = new Dog("Бобик");
+        System.out.println(dog.getName());
+        dog.tellWeather();
+        dog.say();
+        dog.sniff(customer);
+        dog.sniff(employee);
+
 
     }
 }

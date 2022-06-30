@@ -1,6 +1,6 @@
 package Bank;
 
-public class Customer extends Person implements Workable, Accounting {
+public class Customer extends Person implements Workable, Accounting, ChitChat {
     String bankname;
 
     public Customer(String name, String lastName, String bankname) {
@@ -15,11 +15,16 @@ public class Customer extends Person implements Workable, Accounting {
 
     @Override
     public void work() {
-        System.out.println("Будучи клиентом - работаю в качестве менеджера по продажам");
+        System.out.println("(Клиент) работаю в качестве менеджера по продажам в своей компании");
     }
 
     @Override
     public void accountProcess() {
-        System.out.println("Как клиент банка, я могу совершать операции со своим счетом");
+        System.out.println("(Клиент) я могу совершать операции со своим счетом");
+    }
+
+    @Override
+    public void tellWeather() {
+        System.out.println("(Клиент)Сегодня отличная погода");
     }
 }
